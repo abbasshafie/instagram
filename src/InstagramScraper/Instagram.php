@@ -60,9 +60,8 @@ class Instagram
      *
      * @return Instagram
      */
-    public static function withCredentials($username, $password, CacheInterface $cache)
+    public static function withCredentials($username, $password)
     {
-        static::$instanceCache = $cache;
         $instance = new self();
         $instance->sessionUsername = $username;
         $instance->sessionPassword = $password;
